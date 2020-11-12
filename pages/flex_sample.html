@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CodePen - Demo Flexbox 3</title>
+        <style>
+            body{ padding: 2em; }
+
+            .headerContainer {
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: tomato;
+                font-weight: bold;
+                padding: 10px;
+            }
+
+            .footerContainer {
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: lightgreen;
+                font-weight: bold;
+                padding: 10px;
+            }
+
+            .mainContainer {
+                display: flex;
+                flex-flow: row;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .mainContentItem {
+                text-align: left;
+                background: deepskyblue;
+            }
+
+            article {
+                padding: 10px;
+                margin: 10px;
+                background: aqua;
+            }
+
+            .sideBarLeftItem { background: gold; }
+            .sideBarRightItem { background: hotpink; }
+
+            .sideBarItem { 
+                flex: 1 0 0;
+                border: 0px solid green;
+            }
+            .mainContentItem { flex: 3 0px; }
+            .sideBarLeftItem { order: 1; }
+            .mainContentItem { order: 2; }
+            .sideBarRightItem { order: 3; }
+        </style>
+    </head>
+    <body>
+        <header class="headerContainer"><h1>HEADER - Sample Flexbox Example</h1></header>
+        <div class="mainContainer">
+            <section class="mainContentItem">
+                <article>
+                    <h2>First Article</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl. Sit amet venenatis 
+                        urna cursus eget nunc. Varius morbi enim nunc faucibus a pellentesque sit amet.
+                    </p>
+                </article>
+                <article>
+                    <h2>Second Article</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl. Sit amet venenatis 
+                        urna cursus eget nunc. Varius morbi enim nunc faucibus a pellentesque sit amet.
+                    </p>
+                </article>
+                <article>
+                    <h2>Third Article</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl. Sit amet venenatis 
+                        urna cursus eget nunc. Varius morbi enim nunc faucibus a pellentesque sit amet.
+                    </p>
+                </article>
+            </section>
+            <sideBar class="sideBarItem sideBarLeftItem"><div class="center"><p>Left Side Bar</p></div></sideBar>
+            <sideBar class="sideBarItem sideBarRightItem"><div class="center"><p>Right Side Bar</p></div></sideBar>
+        </div>
+        <footer class="footerContainer">Footer</footer>
+        </body>
+    </body>
+</html>

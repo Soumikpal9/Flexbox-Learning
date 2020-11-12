@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flexbox Layout 4</title>
+        <style>
+            body { 
+                display: flex;
+                flex-direction: row;
+                padding: 2em;
+            }
+
+            .navContainer {
+                text-align: center;
+                background: gold;
+                font-weight: bold;
+                padding: 10px;
+                min-width: 200px;
+            }
+
+            .headerContainer {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                background: tomato;
+                font-weight: bold;
+                padding: 10px;
+            }
+
+            .footerContainer {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                background: lightgreen;
+                font-weight: bold;
+                padding: 10px;
+            }
+
+            .mainContainer {
+                display: flex;
+                flex-direction: row;
+                font-weight: bold;
+                background: deepskyblue;
+            }
+
+            .mainContentItem {
+                text-align: left;
+            }
+
+            .rightSideContainer {
+                display: flex;
+                flex-direction:  column;
+                text-align: center;
+                background: hotpink;
+                font-weight: bold;
+                min-width: 150px;
+            }
+
+            article {
+                padding: 10px;
+                margin: 10px;
+                background: aqua;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav class="navContainer">
+            <h3>NAVIGATION BAR</h3>
+        </nav>
+        <div>
+            <header class="headerContainer">
+                <h1>HEADER - Flexbox Layout 4</h1>
+            </header>
+            <div class="mainContainer">
+                <div>
+                    <section class="mainContentItem">
+                        <article>
+                            <h2>First Article</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl. Sit amet venenatis 
+                                urna cursus eget nunc. Varius morbi enim nunc faucibus a pellentesque sit amet.
+                            </p>
+                        </article>
+                        <article>
+                            <h2>Second Article</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl. Sit amet venenatis 
+                                urna cursus eget nunc. Varius morbi enim nunc faucibus a pellentesque sit amet.
+                            </p>
+                        </article>
+                        <article>
+                            <h2>Third Article</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl. Sit amet venenatis 
+                                urna cursus eget nunc. Varius morbi enim nunc faucibus a pellentesque sit amet.
+                            </p>
+                        </article>
+                        <article>
+                            <h2>Fourth Article</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl. Sit amet venenatis 
+                                urna cursus eget nunc. Varius morbi enim nunc faucibus a pellentesque sit amet.
+                            </p>
+                        </article>
+                    </section>
+                    <footer class="footerContainer">
+                        <h3>FOOTER</h3>
+                    </footer>
+                </div>
+                <aside class="rightSideContainer">
+                    <h3>ASIDE</h3>
+                </aside>
+            </div>
+        </div>
+    </body>
+</html>
