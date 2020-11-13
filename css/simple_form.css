@@ -1,0 +1,40 @@
+body{ padding: 2em; }
+
+.headerContainer {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    background: tomato;
+    font-weight: bold;
+    padding: 10px;
+}
+
+form {
+    margin-top: 50px;
+}
+
+div{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label, input, button {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+label {
+    text-align: right;
+    width: 30%;
+    margin-right: 2%;
+}
+
+input {
+    flex: auto;
+}
+
+button {
+    
+}
