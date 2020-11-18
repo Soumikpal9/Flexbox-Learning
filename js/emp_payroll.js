@@ -14,7 +14,7 @@ class EmpPayrollData {
     }
     set name(name){
         let nameRegex = RegExp("^[A-Z]{1}[a-z]{2,}$")
-        if(nameRegex.test(name))    this.name = name
+        if(nameRegex.test(name))    this._name = name
         else throw "Name is Incorrect!"
     }
 
@@ -50,7 +50,8 @@ class EmpPayrollData {
         return this.startDate
     }
     set startDate(startDate){
-        this.startDate = startDate
+        if(startDate <= new Date()) this._startDate = startDate
+        else throw "Enter valid date"
     }
 
     get note(){
@@ -61,9 +62,9 @@ class EmpPayrollData {
     }
 
     toString(){
-        const options ={ year : "numeric", month : "long", day : "numeric"};
+        const options ={ year : "numeric", month : "long", day : "numeric"}
         const empDate = this.startDate === undefined ? "undefined" :
-                       this.startDate.toLocaleDateString("en-US", options);
-       return "name = "+ this.name + " gender = "+ this.gender +" department = "+ this.department + " salary = "+ this.salary;
+                       this.startDate.toLocaleDateString("en-US", options)
+       return "name = "+ this.name + " gender = "+ this.gender +" department = "+ this.department + " salary = "+ this.salary + "startDate = "+ this.startDate
     }
 }
