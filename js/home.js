@@ -51,7 +51,6 @@ const createInnerHtml = () => {
     let innerHtml = `${headerHtml}`
     for(const empPayrollData of empPayrollList) {
         innerHtml = `${innerHtml}
-    }
     <tr>
         <td>
             <img src="${empPayrollData._picture}" class="profile" alt="">
@@ -67,5 +66,6 @@ const createInnerHtml = () => {
         </td>
     </tr>
     `
+    }
     document.querySelector('#table-display').innerHTML = innerHtml
 }
