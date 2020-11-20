@@ -7,7 +7,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
         <title>Employee Payroll App</title>
-        <script defer src="../js/home.js"></script>
     </head>
     <body>
         <!--UC 1 -->
@@ -25,42 +24,17 @@
             <div class="header-content">
                 <div class="emp-detail-text">
                     Employee Details
-                    <div class="emp-count">10</div>
+                    <div class="emp-count"></div>
                 </div>
                 <a href="../pages/payroll_form.html" class="add-button">
                     <img src="../assets/emp_icon.jpg" alt="">AddUser
                 </a>
             </div>
         </div>
-        <!-- UC 3 -->
         <table id="display" class="table">
-            <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Gender</th>
-                <th>Department</th>
-                <th>Salary</th>
-                <th>Start Date</th>
-                <th>Actions</th>
-            </tr>
-            <tr>
-                <td>
-                    <img src="../assets/profile4.jpg" class="profile" alt="">
-                </td>
-                <td>Soumik Pal</td>
-                <td>Male</td>
-                <td>
-                    <div class="dept-label">Engineer</div>
-                    <div class="dept-label">Finance</div>
-                </td>
-                <td>400000</td>
-                <td>1 Nov 2020</td>
-                <td>
-                    <img id="1" onclick="remove(this)" alt="delete" src="../assets/delete_icon.png">
-                    <img id="1" onclick="update(this)" alt="edit" src="../assets/edit_icon.png">
-                </td>
-            </tr>
         </table>
-
+        <script defer src="../js/home.js"></script>
+        <script defer src="../js/payroll_form.js"></script>
+        <script defer src="../js/emp_payroll.js"></script>
     </body>
 </html>
