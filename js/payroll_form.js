@@ -1,3 +1,6 @@
+let isUpdate = false
+let empPayrollObj = {}
+
 window.addEventListener('DOMContentLoaded', (event) => {
 
     const salary = document.querySelector('#salary')
@@ -40,6 +43,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
            }
          })
     }
+
+    checkForUpdate()
 })
     
 const save = () => {
@@ -96,6 +101,32 @@ const unsetSelectedValues = (propertyValue) =>{
     item.checked = false
     })
 }
+
+const setForm = () => {
+     setValue('#name', empPayrollObj._name)
+     setSelectedValues('[name=profile]', empPayrollObj._picture)
+     setSelectedValues('[name=gender]', empPayrollObj._gender)
+     setSelectedValues('[name=department]', empPayrollObj._department)
+     setValue('#salary', empPayrollObj._salary)
+     let date = stringifyDate(empPayrollObj._startDate).split(" ")
+     setValue('#day', date[0])
+     setValue('#month', date[1])
+     setValue('#year', date[2])
+}
+
+const setSelectedValues = (propertyValue, value) => {
+  let allItems = document.querySelector(propertyValue)
+  allItems.forEach(item => {
+    if(Array.isArray(value)) {
+      if(value.includes(item.value)) {
+        item.checked = true
+      }
+    }
+    else if(item.value == value){
+      item.checked = true
+    }
+  })
+}
     
 const resetForm = () => {
     setValue("#name", "")
@@ -107,4 +138,12 @@ const resetForm = () => {
     setValue("#day","1")
     setValue("#month","January")
     setValue("#year", "2020")
+}
+
+const checkForUpdate = () => {
+  const empPayrollJSON = localStorage.getItem('editEmp')
+  isUpdate = empPayrollJSON ? true : false
+  if(!isUpdate) return
+  empPayrollObj = JSON.parse(empPayrollJSON)
+  setForm()
 }
