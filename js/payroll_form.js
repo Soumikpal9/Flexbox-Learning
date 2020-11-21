@@ -2,39 +2,44 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     const salary = document.querySelector('#salary')
     const output = document.querySelector('.salary-output')
-    output.textContent = salary.value
-    salary.addEventListener('input', function(){
-      output.textContent = salary.value
-    })
+    if(salary){
+      salary.addEventListener('input', function(){
+        output.textContent = salary.value
+      })
+    }
     
     const name = document.querySelector("#name")
     const textError = document.querySelector(".text-error")
-    name.addEventListener('input', function(){
-      if(name.value.length == 0){
-        textError.textContent = ""
-        return
-      }
-      try{
-        (new EmployeePayrollData()).name = name.value
-        textError.textContent = ""
-      }catch(e){
-        textError.textContent = e
-      }
-    })
+    if(name){
+      name.addEventListener('input', function(){
+        if(name.value.length == 0){
+          textError.textContent = ""
+          return
+        }
+        try{
+          (new EmployeePayrollData()).name = name.value
+          textError.textContent = ""
+        }catch(e){
+          textError.textContent = e
+        }
+      })
+    }
     
     const startDate = document.querySelector("#startDate")
     const day = document.querySelector("#day")
     const month = document.querySelector("#month")
     const year = document.querySelector("#year")
     const dateError = document.querySelector(".date-error")
-    startDate.addEventListener("input", async function(){
-       try{
-       new EmployeePayrollData().startDate = new Date( Date.UTC(year.value, month.value - 1, day.value))
-        dateError.textContent = ""
-      }catch(e){
-        dateError.textContent = e
-      }
-    })
+    if(startDate){
+        startDate.addEventListener("input", function(){
+            try{
+            new EmployeePayrollData().startDate = new Date( Date.UTC(year.value, month.value - 1, day.value))
+             dateError.textContent = ""
+           }catch(e){
+             dateError.textContent = e
+           }
+         })
+    }
 })
     
 const save = () => {
@@ -74,7 +79,7 @@ function saveData(){
     var day = document.getElementById("day").value
     var month = document.getElementById("month").value
     var year = document.getElementById("year").value
-    employee.note = document.getElementById("notes").value
+    employee.notes = document.getElementById("notes").value
     employee.startDate = new Date(parseInt(year), parseInt(month) - 1, parseInt(day))
     
     return employee

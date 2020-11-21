@@ -1,4 +1,4 @@
-class EmpPayrollData {
+class EmployeePayrollData {
 
     get id(){
         return this._id
@@ -53,10 +53,10 @@ class EmpPayrollData {
     }
 
     get note(){
-        return this._note
+        return this._notes
     }
-    set note(note){
-        this._note = note
+    set note(notes){
+        this._notes = notes
     }
 
     toString(){
